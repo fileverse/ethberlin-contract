@@ -12,7 +12,7 @@ contract FileverseZuPassRegistry is
     ERC2771Context,
     Groth16Verifier
 {
-    string public constant name = "Fileverse Portal Registry";
+    string public constant name = "Fileverse ZuPass Registry - EthBerlin";
     struct Portal {
         address portal;
         uint256 index;

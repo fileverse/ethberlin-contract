@@ -1,0 +1,562 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_trustedForwarder",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "portal",
+						"type": "address"
+					}
+				],
+				"name": "Mint",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_resultsPerPage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_page",
+						"type": "uint256"
+					}
+				],
+				"name": "allPortal",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "portal",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "index",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct FileverseZuPassRegistry.Portal[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "balancesOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[38]",
+						"name": "_pubSignals",
+						"type": "uint256[38]"
+					}
+				],
+				"name": "getSignerFromPublicSignals",
+				"outputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "",
+						"type": "uint256[2]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[38]",
+						"name": "_pubSignals",
+						"type": "uint256[38]"
+					}
+				],
+				"name": "getValidEventIdFromPublicSignals",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[38]",
+						"name": "_pubSignals",
+						"type": "uint256[38]"
+					}
+				],
+				"name": "getWaterMarkFromPublicSignals",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "forwarder",
+						"type": "address"
+					}
+				],
+				"name": "isTrustedForwarder",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_metadataIPFSHash",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_ownerViewDid",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_ownerEditDid",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256[2]",
+								"name": "_pA",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256[2][2]",
+								"name": "_pB",
+								"type": "uint256[2][2]"
+							},
+							{
+								"internalType": "uint256[2]",
+								"name": "_pC",
+								"type": "uint256[2]"
+							},
+							{
+								"internalType": "uint256[38]",
+								"name": "_pubSignals",
+								"type": "uint256[38]"
+							}
+						],
+						"internalType": "struct FileverseZuPassRegistry.ProofArgs",
+						"name": "_proof",
+						"type": "tuple"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_resultsPerPage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_page",
+						"type": "uint256"
+					}
+				],
+				"name": "ownedPortal",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "portal",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "index",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct FileverseZuPassRegistry.Portal[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_portal",
+						"type": "address"
+					}
+				],
+				"name": "ownerOf",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_portal",
+						"type": "address"
+					}
+				],
+				"name": "portalInfo",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "portal",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "index",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct FileverseZuPassRegistry.Portal",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "_pA",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256[2][2]",
+						"name": "_pB",
+						"type": "uint256[2][2]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "_pC",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256[38]",
+						"name": "_pubSignals",
+						"type": "uint256[38]"
+					}
+				],
+				"name": "verifyProof",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"allPortal(uint256,uint256)": {
+					"params": {
+						"_page": "current page",
+						"_resultsPerPage": "results per page"
+					},
+					"returns": {
+						"_0": "portals The array of Portal memory struct with all the portals"
+					}
+				},
+				"balancesOf(address)": {
+					"params": {
+						"_owner": "address of the owner who's balance if being queried"
+					},
+					"returns": {
+						"_0": "balance The array of Portal memory struct with all the portals"
+					}
+				},
+				"constructor": {
+					"params": {
+						"_trustedForwarder": "- instance of the trusted forwarder"
+					}
+				},
+				"mint(string,string,string,(uint256[2],uint256[2][2],uint256[2],uint256[38]))": {
+					"details": "This function also emits a Mint event",
+					"params": {
+						"_metadataIPFSHash": "- The IPFS hash of the metadata file.",
+						"_ownerEditDid": "- owner's edit DID",
+						"_ownerViewDid": "- owner's view DID",
+						"_proof": "- proof of ethberlin pcd"
+					}
+				},
+				"ownedPortal(address,uint256,uint256)": {
+					"params": {
+						"_owner": "address of the owner who's balance if being queried",
+						"_page": "current page",
+						"_resultsPerPage": "results per page"
+					},
+					"returns": {
+						"_0": "portals The array of Portal memory struct owned by the address _owner"
+					}
+				},
+				"ownerOf(address)": {
+					"params": {
+						"_portal": "- The address of the portal"
+					},
+					"returns": {
+						"_0": "owner - The address of the owner"
+					}
+				},
+				"portalInfo(address)": {
+					"params": {
+						"_portal": "- The address of the portal"
+					},
+					"returns": {
+						"_0": "portalInfo The Portal memory struct."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"allPortal(uint256,uint256)": {
+					"notice": "This function returns an array of all the portals in the registry."
+				},
+				"balancesOf(address)": {
+					"notice": "Returning the number of portals owned by the address _owner"
+				},
+				"constructor": {
+					"notice": "constructor for the fileverse portal registry smart contract Implementation that gets deployed: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/metatx/MinimalForwarder.sol"
+				},
+				"mint(string,string,string,(uint256[2],uint256[2][2],uint256[2],uint256[38]))": {
+					"notice": "Create a new FileversePortal contract and assign it to the owner who calls this function"
+				},
+				"ownedPortal(address,uint256,uint256)": {
+					"notice": "Returning a list of portals that are owned by the address _owner"
+				},
+				"ownerOf(address)": {
+					"notice": "get function that returns the owner address of the portal"
+				},
+				"portalInfo(address)": {
+					"notice": "`portalInfo` returns the `Portal` struct for a given portal address"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/FileverseZuPassRegistry.sol": "FileverseZuPassRegistry"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2",
+				"dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y"
+			]
+		},
+		"@openzeppelin/contracts/access/Ownable2Step.sol": {
+			"keccak256": "0x5c879356795cc563440408404a52eaf672d4547949e0a5920fb17642303d9e1b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fb210cdef017f9813af368e17ea1573bc26094dd8dba8b5db8bec4cc90883d0a",
+				"dweb:/ipfs/QmdixQwckiNVVWHaJD9ps5ALWsHkZGRAePkuUPw1ZhhJhM"
+			]
+		},
+		"@openzeppelin/contracts/metatx/ERC2771Context.sol": {
+			"keccak256": "0xb6a3e264c7fc4ec11d244561232b0f49dbccc75ce3d14e5f0181cf134fa6db29",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2998b5ee446069e5d22a9e95e23793cc7db8b371be4ef6ac1244280ae3c44654",
+				"dweb:/ipfs/QmQcPBgUH6eYpa4ewTYvQS4FdJS6GcCyj9hpk6Z4P3KyHL"
+			]
+		},
+		"@openzeppelin/contracts/security/ReentrancyGuard.sol": {
+			"keccak256": "0x190dd6f8d592b7e4e930feb7f4313aeb8e1c4ad3154c27ce1cf6a512fc30d8cc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4ce8dfb62d0c4fa260d6eec8f1cd47f5f2a044e11bde5b31d18072fa6e7d9010",
+				"dweb:/ipfs/QmTyFztU3tLEcEDnqqiaW4UJetqsU77LXc6pjc9oTXCK5u"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+			]
+		},
+		"@openzeppelin/contracts/utils/Counters.sol": {
+			"keccak256": "0xf0018c2440fbe238dd3a8732fa8e17a0f9dce84d31451dc8a32f6d62b349c9f1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://59e1c62884d55b70f3ae5432b44bb3166ad71ae3acd19c57ab6ddc3c87c325ee",
+				"dweb:/ipfs/QmezuXg5GK5oeA4F91EZhozBFekhq5TD966bHPH18cCqhu"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/Math.sol": {
+			"keccak256": "0xa1e8e83cd0087785df04ac79fb395d9f3684caeaf973d9e2c71caef723a3a5d6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://33bbf48cc069be677705037ba7520c22b1b622c23b33e1a71495f2d36549d40b",
+				"dweb:/ipfs/Qmct36zWXv3j7LZB83uwbg7TXwnZSN1fqHNDZ93GG98bGz"
+			]
+		},
+		"contracts/FileversePortal.sol": {
+			"keccak256": "0xa5680d8f8f2c6a513f6b1d2da21752b8304f1773c4be61ebb0689dce6e2c1c63",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d1cc1208dac4a804d8f2b01a6ed286df0c0bf8add299d8e3ac3d4600f9fa8a31",
+				"dweb:/ipfs/QmZvLx8KmNXBpcjZ5Ezd3Minrfun3feqaauS8toFLuWsPk"
+			]
+		},
+		"contracts/FileverseZuPassRegistry.sol": {
+			"keccak256": "0x01b387a59969dd9db56ee2595efd0a120f893c97b2b898e6c568207f6301b186",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fc0307be54d4ab817faec2734e7fc40551946d0fab4257ca06b3de6620e48424",
+				"dweb:/ipfs/Qmb5pPsV3GHvAtBv34kmkT9YBHknyodJ1ne3uZSVXgozUZ"
+			]
+		},
+		"contracts/Groth16Verifier.sol": {
+			"keccak256": "0x83625f3a594b3483b5bca32c1b53f334c0776eb9cb9c4e3a9fff1769693fc858",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://9319514eb0e0c869aa1951101abc03e66b614fbbdd9fd67f2c8dfd85f2a3da4d",
+				"dweb:/ipfs/QmbjRbrYPGxhJSW2vYVDZpUtAqeStrcbH65WTEwGM1m6tq"
+			]
+		}
+	},
+	"version": 1
+}
