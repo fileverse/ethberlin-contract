@@ -1,0 +1,372 @@
+{
+  "name": "FileverseZuPassRegistry",
+  "address": "0x2Ce9f573Ad93F2af604Bd35a4B7793938eF577D7",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_metadataIPFSHash",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_ownerViewDid",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_ownerEditDid",
+          "type": "string"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256[2]",
+              "name": "_pA",
+              "type": "uint256[2]"
+            },
+            {
+              "internalType": "uint256[2][2]",
+              "name": "_pB",
+              "type": "uint256[2][2]"
+            },
+            {
+              "internalType": "uint256[2]",
+              "name": "_pC",
+              "type": "uint256[2]"
+            },
+            {
+              "internalType": "uint256[38]",
+              "name": "_pubSignals",
+              "type": "uint256[38]"
+            }
+          ],
+          "internalType": "struct FileverseZuPassRegistry.ProofArgs",
+          "name": "_proof",
+          "type": "tuple"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_trustedForwarder",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "portal",
+          "type": "address"
+        }
+      ],
+      "name": "Mint",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_resultsPerPage",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_page",
+          "type": "uint256"
+        }
+      ],
+      "name": "allPortal",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "portal",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct FileverseZuPassRegistry.Portal[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balancesOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[38]",
+          "name": "_pubSignals",
+          "type": "uint256[38]"
+        }
+      ],
+      "name": "getSignerFromPublicSignals",
+      "outputs": [
+        {
+          "internalType": "uint256[2]",
+          "name": "",
+          "type": "uint256[2]"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[38]",
+          "name": "_pubSignals",
+          "type": "uint256[38]"
+        }
+      ],
+      "name": "getValidEventIdFromPublicSignals",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[38]",
+          "name": "_pubSignals",
+          "type": "uint256[38]"
+        }
+      ],
+      "name": "getWaterMarkFromPublicSignals",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "forwarder",
+          "type": "address"
+        }
+      ],
+      "name": "isTrustedForwarder",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_resultsPerPage",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_page",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownedPortal",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "portal",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct FileverseZuPassRegistry.Portal[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_portal",
+          "type": "address"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_portal",
+          "type": "address"
+        }
+      ],
+      "name": "portalInfo",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "portal",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct FileverseZuPassRegistry.Portal",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[2]",
+          "name": "_pA",
+          "type": "uint256[2]"
+        },
+        {
+          "internalType": "uint256[2][2]",
+          "name": "_pB",
+          "type": "uint256[2][2]"
+        },
+        {
+          "internalType": "uint256[2]",
+          "name": "_pC",
+          "type": "uint256[2]"
+        },
+        {
+          "internalType": "uint256[38]",
+          "name": "_pubSignals",
+          "type": "uint256[38]"
+        }
+      ],
+      "name": "verifyProof",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "filePath": " - connect to localhost - /contracts/FileverseZuPassRegistry.sol",
+  "pinnedAt": 1723826781450
+}
